@@ -1,0 +1,39 @@
+﻿jornada;formato_jornada;equipo_local;equipo_visitante;fecha;local_visitante;rival;resultado;altura_media;verticalidad;goles_a_favor;goles_en_contra;min_primer_gol_a_favor;min_primer_gol_en_contra;expulsion_propia;expulsion_rival;min_expulsion_propia;min_expulsion_rival
+1ª;1ª_VIL-ATM;Villarreal CF;Atletico de Madrid;19/08/2024;V;Villarreal CF;2-2;50.46;44.27%;2;2;20;18;0;0;0;0
+2ª;2ª_ATM-GIR;Atletico de Madrid;Girona FC;25/08/2024;L;Girona FC;3-0;49.84;45.89%;3;0;39;0;0;0;0;0
+3ª;3ª_ATM-ESP;Atletico de Madrid;RCD Español;28/08/2024;L;RCD Español;0-0;57.79;41.39%;0;0;0;0;0;0;0;0
+4ª;4ª_ATH-ATM;Athletic Club;Atletico de Madrid;31/08/2024;V;Athletic Club;0-1;45.86;44.46%;1;0;92;0;0;0;0;0
+5ª;5ª_ATM-VAL;Atletico de Madrid;Valencia CF;15/09/2024;L;Valencia CF;3-0;53.55;49.5%;3;0;39;0;0;0;0;0
+6ª;6ª_RAY-ATM;Rayo Vallecano;Atletico de Madrid;22/09/2024;V;Rayo Vallecano;1-1;49.78;53.75%;1;1;49;35;0;0;0;0
+7ª;7ª_CEL-ATM;RC Celta de Vigo;Atletico de Madrid;26/09/2024;V;RC Celta de Vigo;0-1;50.35;48.43%;1;0;90;0;0;0;0;0
+8ª;8ª_ATM-RMA;Atletico de Madrid;Real Madrid;29/09/2024;L;Real Madrid;1-1;51.2;47.76%;1;1;95;64;1;0;99;0
+9ª;9ª_RSO-ATM;Real Sociedad;Atletico de Madrid;06/10/2024;V;Real Sociedad;1-1;44.57;60.38%;1;1;1;84;0;0;0;0
+10ª;10ª_ATM-LEG;Atletico de Madrid;CD Leganes;20/10/2024;L;CD Leganes;3-1;56.58;47.14%;3;1;69;34;0;0;0;0
+11ª;11ª_BET-ATM;Real Betis;Atletico de Madrid;27/10/2024;V;Real Betis;1-0;51.46;55.94%;0;1;0;4;0;0;0;0
+12ª;12ª_ATM-LPM;Atletico de Madrid;UD Las Palmas;03/11/2024;L;UD Las Palmas;2-0;56.69;50.46%;2;0;37;0;0;0;0;0
+13ª;13ª_MLL-ATM;RCD Mallorca;Atletico de Madrid;10/11/2024;V;RCD Mallorca;0-1;47.31;42.45%;1;0;61;0;0;0;0;0
+14ª;14ª_ATM-ALA;Atletico de Madrid;Deportivo Alaves;23/11/2024;L;Deportivo Alaves;2-1;57.76;45.35%;2;1;76;7;0;0;0;0
+15ª;15ª_RVL-ATM;Real Valladolid;Atletico de Madrid;30/11/2024;V;Real Valladolid;0-5;49.39;46.89%;5;0;26;0;0;0;0;0
+16ª;16ª_ATM-SEV;Atletico de Madrid;Sevilla FC;08/12/2024;L;Sevilla FC;4-3;56.71;43.39%;4;3;10;12;0;0;0;0
+17ª;17ª_ATM-GET;Atletico de Madrid;Getafe CF;15/12/2024;L;Getafe CF;1-0;51.4;51.33%;1;0;69;0;0;0;0;0
+18ª;18ª_FCB-ATM;FC Barcelona;Atletico de Madrid;21/12/2024;V;FC Barcelona;1-2;39.05;51.47%;2;1;60;30;0;0;0;0
+19ª;19ª_ATM-OSA;Atletico de Madrid;CA Osasuna;12/01/2025;L;CA Osasuna;1-0;48.97;46.62%;1;0;55;0;0;0;0;0
+20ª;20ª_LEG-ATM;CD Leganes;Atletico de Madrid;18/01/2025;V;CD Leganes;1-0;58.02;41.33%;0;1;0;49;0;0;0;0
+21ª;21ª_ATM-VIL;Atletico de Madrid;Villarreal CF;25/01/2025;L;Villarreal CF;1-1;56.22;42.12%;1;1;58;29;0;0;0;0
+22ª;22ª_ATM-MLL;Atletico de Madrid;RCD Mallorca;01/02/2025;L;RCD Mallorca;2-0;52.75;47.48%;2;0;26;0;0;0;0;0
+23ª;23ª_RMA-ATM;Real Madrid;Atletico de Madrid;08/02/2025;V;Real Madrid;1-1;45.29;42.92%;1;1;35;50;0;0;0;0
+24ª;24ª_ATM-CEL;Atletico de Madrid;RC Celta de Vigo;15/02/2025;L;RC Celta de Vigo;1-1;48.18;52.62%;1;1;81;68;1;0;7;0
+25ª;25ª_VAL-ATM;Valencia CF;Atletico de Madrid;22/02/2025;V;Valencia CF;0-3;45.73;51.63%;3;0;12;0;0;0;0;0
+26ª;26ª_ATM-ATH;Atletico de Madrid;Athletic Club;01/03/2025;L;Athletic Club;1-0;47.88;47.14%;1;0;66;0;0;0;0;0
+27ª;27ª_GET-ATM;Getafe CF;Atletico de Madrid;09/03/2025;V;Getafe CF;2-1;46.69;40.88%;1;2;75;88;1;0;88;0
+28ª;28ª_ATM-FCB;Atletico de Madrid;FC Barcelona;16/03/2025;L;FC Barcelona;2-4;47.83;59.84%;2;4;45;72;0;0;0;0
+29ª;29ª_ESP-ATM;RCD Español;Atletico de Madrid;29/03/2025;V;RCD Español;1-1;54.97;43.6%;1;1;38;71;0;0;0;0
+30ª;30ª_SEV-ATM;Sevilla FC;Atletico de Madrid;;V;Sevilla FC;;;;;;;;;;;
+31ª;31ª_ATM-RVL;Atletico de Madrid;Real Valladolid;;L;Real Valladolid;;;;;;;;;;;
+32ª;32ª_LPM-ATM;UD Las Palmas;Atletico de Madrid;;V;UD Las Palmas;;;;;;;;;;;
+33ª;33ª_ATM-RAY;Atletico de Madrid;Rayo Vallecano;;L;Rayo Vallecano;;;;;;;;;;;
+34ª;34ª_ALA-ATM;Deportivo Alaves;Atletico de Madrid;;V;Deportivo Alaves;;;;;;;;;;;
+35ª;35ª_ATM-RSO;Atletico de Madrid;Real Sociedad;;L;Real Sociedad;;;;;;;;;;;
+36ª;36ª_OSA-ATM;CA Osasuna;Atletico de Madrid;;V;CA Osasuna;;;;;;;;;;;
+37ª;37ª_ATM-BET;Atletico de Madrid;Real Betis;;L;Real Betis;;;;;;;;;;;
+38ª;38ª_GIR-ATM;Girona FC;Atletico de Madrid;;V;Girona FC;;;;;;;;;;;
