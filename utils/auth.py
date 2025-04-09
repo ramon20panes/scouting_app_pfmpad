@@ -1,0 +1,103 @@
+# utils/auth.py
+import streamlit as st
+import time
+from datetime import datetime
+import logging
+from utils.db import check_user, get_user_by_username
+
+# Configuración de logging
+logging.basicConfig(
+    filename='streamlit_auth.log', 
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+# Constantes
+SESSION_TIMEOUT = 1800  # 30 minutos en segundos
+
+def check_session_timeout():
+    """Verifica si la sesión ha expirado"""
+    if 'last_activity' in st.session_state and st.session_state.last_activity is not None:
+        last_activity = st.session_state.last_activity
+        if (datetime.now() - last_activity).total_seconds() > SESSION_TIMEOUT:
+            # Limpiar estado de sesión
+            st.session_state.authentication_status = False
+            st.session_state.last_activity = None
+            return False
+        return True
+    return False        
+
+def update_last_activity():
+    """Actualiza el timestamp de última actividad"""
+    st.session_state.last_activity = datetime.now()
+
+def login():
+    """Maneja la autenticación del usuario"""
+    username = st.text_input("Usuario", key="username_input")
+    password = st.text_input("Contraseña", type="password", key="password_input")
+    
+    if st.button("Iniciar Sesión", key="login_button"):
+        user = check_user(username, password)
+        
+        if user:
+            st.session_state.authentication_status = True
+            st.session_state.username = username
+            st.session_state.name = user['name']
+            st.session_state.role = user['role']
+            st.session_state.player_id = user['player_id']
+            st.session_state.last_activity = datetime.now()
+            
+            # Mensaje de éxito
+            st.success(f"¡Bienvenido, {user['name']}!", icon="✅")
+            time.sleep(0.8)
+            
+            # Redirección a la primera página
+            st.session_state.redirect_to = "1_📊_team_stats"
+            st.rerun()
+        else:
+            logging.warning(f"Intento de login fallido para usuario: {username}")
+            st.error('Usuario o contraseña incorrectos', icon="🚨")
+
+def logout():
+    """Cierra la sesión del usuario"""
+    for key in ['authentication_status', 'username', 'name', 'role', 'player_id', 'redirect_to', 'last_activity']:
+        if key in st.session_state:
+            del st.session_state[key]
+    
+    st.switch_page("app.py")
+
+def check_auth():
+    """Verifica autenticación y timeout"""
+    if "authentication_status" in st.session_state and st.session_state.authentication_status:
+        if check_session_timeout():
+            update_last_activity()
+            return True
+    return False
+
+def get_user_role():
+    """Obtiene el rol del usuario autenticado"""
+    if "role" in st.session_state:
+        return st.session_state.role
+    return None
+
+def get_user_name():
+    """Obtiene el nombre del usuario autenticado"""
+    if "name" in st.session_state:
+        return st.session_state.name
+    return None
+
+def get_player_id():
+    """Obtiene el ID del jugador si el usuario es un jugador"""
+    if "player_id" in st.session_state:
+        return st.session_state.player_id
+    return None
+
+def check_admin_access():
+    """Verifica si el usuario tiene acceso de administrador"""
+    role = get_user_role()
+    return role in ["admin", "Director"]
+
+def check_player_access():
+    """Verifica si el usuario es un jugador"""
+    role = get_user_role()
+    return role == "player"

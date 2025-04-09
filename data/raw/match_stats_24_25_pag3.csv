@@ -1,0 +1,61 @@
+Jornada,Partido,Equipo,Resultado,Goles,Tiros a Puerta,Tiros Fuera,Tiros Totales,Tiros Bloqueados,Tiros Dentro Area,Tiros Fuera Area,Faltas,Córners,Fueras de Juego,Posesión,Tarjetas Amarillas,Tarjetas Rojas,Paradas,Pases Totales,Pases Completados,Precisión de Pases,xG,Goles Evitados
+1,Villarreal-Atletico Madrid,Villarreal,2-2,2,3,4,9,2,6,3,7,2,2,45.0,1,0,2,477,420,88.0,0.79,-1
+1,Villarreal-Atletico Madrid,Atletico Madrid,2-2,2,4,4,9,1,7,2,12,3,2,55.0,3,0,2,592,519,88.0,1.11,-1
+2,Atletico Madrid-Girona,Atletico Madrid,3-0,3,6,2,11,3,6,5,11,1,2,42.0,1,0,4,462,404,87.0,1.22,-1
+2,Atletico Madrid-Girona,Girona,3-0,0,4,3,13,6,7,6,11,9,2,58.0,3,0,3,610,561,92.0,0.68,-1
+3,Atletico Madrid-Espanyol,Atletico Madrid,0-0,0,7,10,25,8,18,7,6,9,6,62.0,0,0,1,595,523,88.0,2.47,1
+3,Atletico Madrid-Espanyol,Espanyol,0-0,0,1,7,8,0,4,4,9,3,0,38.0,2,0,7,362,289,80.0,0.61,1
+4,Athletic Club-Atletico Madrid,Athletic Club,0-1,0,1,5,8,2,2,6,13,2,1,53.0,3,0,1,585,508,87.0,0.29,0
+4,Athletic Club-Atletico Madrid,Atletico Madrid,0-1,1,2,4,9,3,7,2,9,2,2,47.0,1,0,1,524,439,84.0,1.73,0
+5,Atletico Madrid-Valencia,Atletico Madrid,3-0,3,4,9,14,1,14,0,10,7,1,53.0,1,0,1,515,438,85.0,3.24,0
+5,Atletico Madrid-Valencia,Valencia,3-0,0,1,3,5,1,2,3,8,3,2,47.0,2,0,1,465,385,83.0,0.15,0
+6,Rayo Vallecano-Atletico Madrid,Rayo Vallecano,1-1,1,4,7,16,5,5,11,9,3,0,55.0,0,0,4,517,418,81.0,1.83,0
+6,Rayo Vallecano-Atletico Madrid,Atletico Madrid,1-1,1,5,2,10,3,6,4,12,4,0,45.0,0,0,3,432,334,77.0,0.56,0
+7,Celta Vigo-Atletico Madrid,Celta Vigo,0-1,0,4,6,10,0,6,4,11,2,0,58.0,2,0,1,669,588,88.0,1.53,1
+7,Celta Vigo-Atletico Madrid,Atletico Madrid,0-1,1,2,2,8,4,4,4,11,3,0,42.0,2,0,4,469,374,80.0,0.62,1
+8,Atletico Madrid-Real Madrid,Atletico Madrid,1-1,1,4,2,12,6,8,4,11,5,2,51.0,3,1,3,570,497,87.0,1.28,0
+8,Atletico Madrid-Real Madrid,Real Madrid,1-1,1,4,4,12,4,5,7,11,5,0,49.0,1,0,3,548,490,89.0,0.76,0
+9,Real Sociedad-Atletico Madrid,Real Sociedad,1-1,1,7,9,16,0,9,7,10,5,2,67.0,0,0,0,648,581,90.0,1.0,0
+9,Real Sociedad-Atletico Madrid,Atletico Madrid,1-1,1,1,3,4,0,2,2,9,1,2,33.0,2,0,6,333,243,73.0,0.54,0
+10,Atletico Madrid-Leganes,Atletico Madrid,3-1,3,9,8,24,7,15,9,14,8,0,63.0,5,0,1,568,484,85.0,4.51,0
+10,Atletico Madrid-Leganes,Leganes,3-1,1,2,1,5,2,2,3,8,2,1,37.0,1,0,5,341,260,76.0,0.24,0
+11,Real Betis-Atletico Madrid,Atletico Madrid,1-0,0,3,4,10,3,8,2,4,10,1,58.0,2,0,3,533,415,78.0,0.54,0
+11,Real Betis-Atletico Madrid,Real Betis,1-0,1,3,17,24,4,16,8,8,3,3,42.0,3,0,3,380,300,79.0,1.94,0
+12,Atletico Madrid-Las Palmas,Las Palmas,2-0,0,1,0,1,0,1,0,13,1,0,43.0,1,0,1,410,314,77.0,0.02,0
+12,Atletico Madrid-Las Palmas,Atletico Madrid,2-0,2,3,8,15,4,11,4,13,9,1,57.0,1,0,1,541,455,84.0,1.63,0
+13,Mallorca-Atletico Madrid,Atletico Madrid,0-1,1,2,4,9,3,4,5,16,2,1,47.0,3,0,5,479,423,88.0,0.65,0
+13,Mallorca-Atletico Madrid,Mallorca,0-1,0,6,5,13,2,11,2,10,7,3,53.0,1,0,1,530,475,90.0,0.61,0
+14,Atletico Madrid-Alaves,Alaves,2-1,1,1,1,4,2,1,3,19,0,2,30.0,3,0,6,258,175,68.0,0.86,0
+14,Atletico Madrid-Alaves,Atletico Madrid,2-1,2,8,1,11,2,6,5,18,5,3,70.0,3,0,0,591,505,85.0,1.65,0
+15,Valladolid-Atletico Madrid,Atletico Madrid,0-5,5,9,2,13,2,10,3,11,5,3,55.0,2,0,1,608,532,88.0,3.99,0
+15,Valladolid-Atletico Madrid,Valladolid,0-5,0,1,5,9,3,7,2,6,3,1,45.0,1,0,4,479,410,86.0,0.47,0
+16,Atletico Madrid-Sevilla,Atletico Madrid,4-3,4,9,4,14,1,10,4,11,5,1,57.0,4,0,0,666,566,85.0,2.04,-1
+16,Atletico Madrid-Sevilla,Sevilla,4-3,3,3,1,4,0,3,1,8,3,0,43.0,3,0,5,514,422,82.0,0.39,-1
+17,Atletico Madrid-Getafe,Getafe,1-0,0,1,3,7,3,3,4,15,3,0,43.0,1,0,2,374,279,75.0,0.21,0
+17,Atletico Madrid-Getafe,Atletico Madrid,1-0,1,3,6,11,2,10,1,13,8,1,57.0,3,0,1,489,400,82.0,1.67,0
+18,Barcelona-Atletico Madrid,Barcelona,1-2,1,7,6,19,6,14,5,11,11,2,63.0,0,0,2,647,579,89.0,2.54,0
+18,Barcelona-Atletico Madrid,Atletico Madrid,1-2,2,4,1,5,0,2,3,8,3,4,37.0,3,0,6,392,305,78.0,0.63,0
+19,Atletico Madrid-Osasuna,Atletico Madrid,1-0,1,5,3,9,1,9,0,8,4,1,51.0,2,0,1,555,472,85.0,2.54,1
+19,Atletico Madrid-Osasuna,Osasuna,1-0,0,1,4,6,1,3,3,14,0,2,49.0,0,0,4,533,455,85.0,0.28,1
+20,Leganes-Atletico Madrid,Atletico Madrid,1-0,0,4,11,19,4,12,7,6,9,2,68.0,3,0,2,626,552,88.0,2.42,0
+20,Leganes-Atletico Madrid,Leganes,1-0,1,3,4,9,2,5,4,16,2,2,32.0,1,0,3,304,240,79.0,0.41,0
+21,Atletico Madrid-Villarreal,Villarreal,1-1,1,1,8,11,2,11,0,14,6,0,41.0,2,0,7,399,325,81.0,2.23,0
+21,Atletico Madrid-Villarreal,Atletico Madrid,1-1,1,8,8,20,4,11,9,10,5,0,59.0,4,0,0,587,512,87.0,1.71,0
+22,Atletico Madrid-Mallorca,Mallorca,2-0,0,1,2,10,7,5,5,14,4,0,47.0,3,0,3,415,348,84.0,0.48,0
+22,Atletico Madrid-Mallorca,Atletico Madrid,2-0,2,5,8,17,4,7,10,9,10,2,53.0,2,0,1,461,395,86.0,1.29,0
+23,Real Madrid-Atletico Madrid,Atletico Madrid,1-1,1,1,7,10,2,6,4,13,1,1,40.0,3,0,8,440,380,86.0,1.54,0
+23,Real Madrid-Atletico Madrid,Real Madrid,1-1,1,9,7,23,7,11,12,14,6,2,60.0,1,0,0,664,617,93.0,1.69,0
+24,Atletico Madrid-Celta Vigo,Celta Vigo,1-1,1,4,5,11,2,6,5,18,7,1,67.0,5,0,2,643,582,91.0,1.75,0
+24,Atletico Madrid-Celta Vigo,Atletico Madrid,1-1,1,3,2,9,4,8,1,8,2,1,33.0,3,1,3,314,247,79.0,0.55,0
+25,Valencia-Atletico Madrid,Atletico Madrid,0-3,3,3,4,11,4,8,3,16,0,2,51.0,3,0,2,578,507,88.0,1.28,0
+25,Valencia-Atletico Madrid,Valencia,0-3,0,2,9,18,7,10,8,18,7,0,49.0,1,0,0,525,482,92.0,0.86,0
+26,Atletico Madrid-Athletic Club,Athletic Club,1-0,0,3,6,15,6,11,4,8,2,0,49.0,3,0,3,480,401,84.0,1.12,0
+26,Atletico Madrid-Athletic Club,Atletico Madrid,1-0,1,4,5,12,3,10,2,7,6,4,51.0,2,0,3,487,406,83.0,2.25,0
+27,Getafe-Atletico Madrid,Atletico Madrid,2-1,1,2,0,4,2,4,0,14,4,4,61.0,2,1,1,511,431,84.0,0.97,0
+27,Getafe-Atletico Madrid,Getafe,2-1,2,3,4,11,4,7,4,10,4,2,39.0,6,0,1,315,235,75.0,1.19,0
+28,Atletico Madrid-Barcelona,Atletico Madrid,2-4,2,2,4,7,1,4,3,10,6,2,34.0,1,0,2,320,244,76.0,1.36,0
+28,Atletico Madrid-Barcelona,Barcelona,2-4,4,6,6,13,1,7,6,11,6,0,66.0,3,0,0,639,575,90.0,1.26,0
+29,Espanyol-Atletico Madrid,Atletico Madrid,1-1,1,2,5,13,6,6,7,14,3,5,61.0,1,0,0,626,545,87.0,0.64,0
+29,Espanyol-Atletico Madrid,Espanyol,1-1,1,1,4,8,3,4,4,12,4,0,39.0,2,0,1,398,327,82.0,0.94,0
+30,Sevilla-Atletico Madrid,Atletico Madrid,1-2,2,5,3,13,5,9,4,12,7,0,56.0,4,0,4,540,474,88.0,1.26,0
+30,Sevilla-Atletico Madrid,Sevilla,1-2,1,6,5,11,0,7,4,14,7,0,44.0,1,0,3,429,361,84.0,0.73,0
