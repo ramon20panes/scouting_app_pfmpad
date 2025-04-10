@@ -117,11 +117,19 @@ else:
         st.session_state.redirect_to = None  # Limpiar
         st.switch_page(f"pages/{target_page}.py")
 
-# Footer
-st.markdown("""
-    <div style="display: flex; justify-content: space-between; align-items: center; position: fixed; bottom: 0; right: 0; width: 100%; padding: 10px 20px; background-color: #f8f9fa;">
-        <div>
-            <strong>Ramón González</strong><br>
-            Mod11 MPAD
-        </div>
-""", unsafe_allow_html=True)
+# Footer más simple con dos columnas
+st.markdown("<div style='height: 50px;'></div>", unsafe_allow_html=True)  # Espacio antes del footer
+
+footer_col1, footer_col2 = st.columns(2)
+
+with footer_col1:
+    st.markdown("<strong>Ramón González</strong><br>Mod11 MPAD", unsafe_allow_html=True)
+
+with footer_col2:
+    if os.path.exists(FOOTER_PATH):
+        footer_img = base64_image(FOOTER_PATH)
+        st.markdown(f"""
+            <div style="text-align: right;">
+                <img src="data:image/png;base64,{footer_img}" style="max-height: 50px;">
+            </div>
+        """, unsafe_allow_html=True)

@@ -33,30 +33,37 @@ def update_last_activity():
 
 def login():
     """Maneja la autenticación del usuario"""
-    username = st.text_input("Usuario", key="username_input")
-    password = st.text_input("Contraseña", type="password", key="password_input")
     
-    if st.button("Iniciar Sesión", key="login_button"):
-        user = check_user(username, password)
+    # Creamos un formulario que se puede enviar con Enter
+    with st.form(key="login_form"):
+        username = st.text_input("Usuario", key="username_input")
+        password = st.text_input("Contraseña", type="password", key="password_input")
         
-        if user:
-            st.session_state.authentication_status = True
-            st.session_state.username = username
-            st.session_state.name = user['name']
-            st.session_state.role = user['role']
-            st.session_state.player_id = user['player_id']
-            st.session_state.last_activity = datetime.now()
+        # El botón de submit del formulario (se activa con Enter o clic)
+        submit_button = st.form_submit_button("Iniciar Sesión")
+        
+        # Procesamiento del formulario (se ejecuta cuando se presiona Enter o se hace clic en el botón)
+        if submit_button:
+            user = check_user(username, password)
             
-            # Mensaje de éxito
-            st.success(f"¡Bienvenido, {user['name']}!", icon="✅")
-            time.sleep(0.8)
-            
-            # Redirección a la primera página
-            st.session_state.redirect_to = "1_📊_team_stats"
-            st.rerun()
-        else:
-            logging.warning(f"Intento de login fallido para usuario: {username}")
-            st.error('Usuario o contraseña incorrectos', icon="🚨")
+            if user:
+                st.session_state.authentication_status = True
+                st.session_state.username = username
+                st.session_state.name = user['name']
+                st.session_state.role = user['role']
+                st.session_state.player_id = user['player_id']
+                st.session_state.last_activity = datetime.now()
+                
+                # Mensaje de éxito
+                st.success(f"¡Bienvenido, {user['name']}!", icon="✅")
+                time.sleep(0.8)
+                
+                # Redirección a la primera página
+                st.session_state.redirect_to = "1_📊_Team_stats"
+                st.rerun()
+            else:
+                logging.warning(f"Intento de login fallido para usuario: {username}")
+                st.error('Usuario o contraseña incorrectos', icon="🚨")
 
 def logout():
     """Cierra la sesión del usuario"""

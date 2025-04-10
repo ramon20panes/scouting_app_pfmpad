@@ -16,6 +16,10 @@ data/**/*.db
 data/auth/*.db
 data/auth/
 
+# No ignorar este archivo específico
+!data/raw/base_atleti_streamlit.db
+
+
 # Archivos de log
 *.log
 logs/
@@ -51,3 +55,7 @@ var/
 *.swp
 *.swo
 .DS_Store
+
+# Ignorar archivos específicos de Python
+utils/db.py
+create_db.py

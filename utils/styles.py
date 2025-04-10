@@ -7,7 +7,7 @@ def load_all_styles():
         <style>
         /* Variables CSS para mantener consistencia */
         :root {
-            --primary-color: #001F3F;
+            --primary-color: #272E61;
             --primary-font: 'Roboto Slab', serif;
             --spacing-sm: 0.5rem;
             --spacing-md: 1rem;
