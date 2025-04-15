@@ -129,11 +129,10 @@ else:
         if os.path.exists(hidden_path):
             os.rename(hidden_path, original_path)
 
-    # Redirección tras login
+   # Redirección tras login
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
-        target_page = st.session_state.redirect_to
-        st.session_state.redirect_to = None  # Limpiar
-        st.switch_page(f"pages/{target_page}.py")
+        st.switch_page(st.session_state.redirect_to)
+        st.session_state.redirect_to = None
 
 # Espacio antes del footer
 st.markdown('<div style="margin-top: 30px;"></div>', unsafe_allow_html=True)
