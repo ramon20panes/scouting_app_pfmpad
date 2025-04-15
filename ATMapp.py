@@ -133,7 +133,7 @@ else:
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
         target_page = st.session_state.redirect_to
         st.session_state.redirect_to = None  # Limpiar
-        st.switch_page(f"pages/{target_page}")
+        st.switch_page(target_page)
 
 # Espacio antes del footer
 st.markdown('<div style="margin-top: 30px;"></div>', unsafe_allow_html=True)
