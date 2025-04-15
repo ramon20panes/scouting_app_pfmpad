@@ -91,21 +91,21 @@ streamlit run ATMapp.py
 
 ## 🌐 Despliegue
 
-# ✅ Preparada para Streamlit Cloud
+### ✅ Preparada para Streamlit Cloud
 
-# 🐳 Lista para montar en Docker
+### 🐳 Lista para montar en Docker
 
-# 📦 Organización modular para integraciones externas
+### 📦 Organización modular para integraciones externas
 
 
-### **📄 Autores y Créditos**
+## **📄 Autores y Créditos**
 
 👨‍🏫 Ramón González
 
 Máster PFMPAD – Módulo 11
 
 
-### **Agradeciimientos**
+## **Agradecimientos**
 
 [Lucas Bracamonte](https://www.linkedin.com/in/lucas-braca?originalSubdomain=ar)
 
