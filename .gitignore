@@ -51,3 +51,12 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Archivos sin emoji para desarrollo local
+pages/1_Team_stats.py
+pages/2_Season_viz.py
+pages/3_Match_analysis.py
+pages/4_Play_style.py
+pages/5_Players_stats.py
+pages/6_Physical_data.py
+pages/7_Similar_players.py
