@@ -1,6 +1,6 @@
 # 🧠 Scouting App PFMPAD – Atlético de Madrid 24/25
 
-Aplicación desarrollada en **Python + Streamlit** como parte del módulo del proyecto fin de Máster de Python aplicaco al deporte (PFMPAD). Su propósito es ofrecer una plataforma visual e interactiva para **el análisis físico, técnico y táctico del primer equipo del Atlético de Madrid**, como ejemplo para ejecutar en cualquier institución deportiva o empresa.
+Aplicación desarrollada en **Python + Streamlit** como parte del módulo del proyecto fin de Máster de Python aplicado al deporte (PFMPAD). Su propósito es ofrecer una plataforma visual e interactiva para **el análisis físico, técnico y táctico del primer equipo del Atlético de Madrid**, como ejemplo para ejecutar en cualquier institución deportiva o empresa.
 
 ---
 
@@ -9,7 +9,7 @@ Aplicación desarrollada en **Python + Streamlit** como parte del módulo del pr
 ### 0. **Login por roles**
 - Acceso o no según rol dentro de club
 
-### 2. **Stats acumuladas**
+### 1. **Stats acumuladas**
 - Datos por jugador de la presente temporada
 - Ránkings y tabla
 
@@ -89,6 +89,14 @@ pip install -r requirements.txt
 streamlit run ATMapp.py
 
 
+## 🌐 Despliegue
+
+# ✅ Preparada para Streamlit Cloud
+
+# 🐳 Lista para montar en Docker
+
+# 📦 Organización modular para integraciones externas
+
 
 ### **📄 Autores y Créditos**
 
@@ -99,7 +107,7 @@ Máster PFMPAD – Módulo 11
 
 ### **Agradeciimientos**
 
-[Lucas Brcamonte](https://www.linkedin.com/in/lucas-braca?originalSubdomain=ar)
+[Lucas Bracamonte](https://www.linkedin.com/in/lucas-braca?originalSubdomain=ar)
 
 
 [Sport Data Campus](https://www.linkedin.com/school/sports-data-campus/?trk=publ)
