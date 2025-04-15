@@ -1,8 +1,8 @@
 [theme]
-primaryColor = "#272E61"
-backgroundColor = "#D0DAD8"
-secondaryBackgroundColor = "#D3D3D3"
-textColor = "#272E61"
+primaryColor = "#272E61"       # Azul Atlético de Madrid para acentos y elementos interactivos
+backgroundColor = "#D0DAD8"    # Gris claro de la segunda equipación como fondo principal
+secondaryBackgroundColor = "#B5BFC0"    # Gris ligeramente más oscuro para fondo secundario
+textColor = "#272E61"         # Azul Atlético para el texto principal
 font = "sans serif"
 
 [server]

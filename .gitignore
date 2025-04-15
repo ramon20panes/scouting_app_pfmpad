@@ -1,41 +1,42 @@
 ﻿# Archivos de entorno y configuración
-venv/
-__pycache__/
-*.pyc
 .env
-.DS_Store
 .env.*
+.DS_Store
+venv/
+entorno/
+env/
+.Python
 .streamlit/secrets.toml
 
-# Bases de datos y archivos sensibles
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Bases de datos y scripts que no deben subirse
 *.db
 *.sqlite
 *.sqlite3
 data/auth/*.db
 data/raw/ATM_condic_24_25.db
-# Ignorar archivos específicos de Python
-utils/db.py
 create_db.py
+utils/db.py
 
-# No ignorar este archivo específico
+# Excepción: este archivo sí se sube
 !data/raw/base_atleti_streamlit.db
 
-
-
-# Archivos de log
+# Logs
 *.log
 logs/
 
-# Directorios y archivos específicos de Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-entorno/
-ENV/
+# Archivos del IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos de instalación y build
 build/
 develop-eggs/
 dist/
@@ -50,10 +51,3 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Directorios y archivos específicos del IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store

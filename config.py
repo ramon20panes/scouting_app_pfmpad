@@ -1,5 +1,4 @@
-# config.py
-# config.py
+# Rutas hacia bases de datos
 import os
 from pathlib import Path
 

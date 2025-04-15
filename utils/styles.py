@@ -2,244 +2,306 @@ import streamlit as st
 
 def load_all_styles():
     """Carga todos los estilos CSS de la aplicación"""
-    
+
     st.markdown("""
         <style>
         /* Variables CSS para mantener consistencia */
         :root {
-            --primary-color: #272E61;
+            --primary-color: #272E61;  /* Azul Atlético de Madrid */
             --primary-font: 'Roboto Slab', serif;
             --spacing-sm: 0.5rem;
             --spacing-md: 1rem;
             --spacing-lg: 1.5rem;
+            --border-radius: 8px;  /* Radio de los bordes */
+            --background-color: #D0DAD8;  /* Gris claro - fondo principal */
+            --secondary-background: #B5BFC0;  /* Gris más oscuro - fondo secundario */
+            --text-color: #272E61;  /* Azul para texto */
+            --sidebar-background-color: #9BA3A4;  /* Gris más oscuro para la sidebar */
+            --sidebar-text-color: #272E61;  /* Azul para texto en sidebar */
+            --selector-border-color: #272E61;  /* Azul para bordes de selectores */
+            --button-background-color: #9BA3A4;  /* Gris oscuro para botones */
+            --button-text-color: #272E61;  /* Azul para texto de botones */
+            --button-hover-color: #8B9394;  /* Gris más oscuro para hover */
+            --pdf-button-background: #272E61;  /* Azul para botón PDF */
+            --pdf-button-text: #FFFFFF;  /* Blanco para texto botón PDF */
         }
         
-        /* Control inmediato de sidebar y navegación */
-        [data-testid="stSidebar"][aria-expanded="false"],
-        [data-testid="stSidebar"][aria-expanded="true"],
-        div[data-testid="collapsedControl"],
-        section[data-testid="stSidebarNav"],
-        button[kind="menuButton"],
-        .stDeployButton,
-        div[class^="stToolbar"] {
-            display: none !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            position: absolute !important;
-            z-index: -1 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }        
-        
-        /* Importar fuente similar a Rockwell */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
-        
-        /* Aplicar fuente a toda la aplicación */
-        * {
-            font-family: var(--primary-font) !important;
+        /* Forzar el fondo en la aplicación completa */
+        .stApp {
+            background-color: var(--background-color) !important;
         }
         
-        /* Estilos principales */
-        .main-title {
-            text-align: left;
-            font-size: 2.5em;
-            margin-bottom: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        .subtitle {
-            text-align: left;
-            font-size: 1.8em;
-            color: var(--primary-color);
-            margin-top: 0;
-            font-weight: bold;
-        }
-        
-        /* Contenedor del autor */
-        .author-container {
-            position: fixed;
-            right: 20px;
-            bottom: 60px;
-            text-align: right;
-            color: var(--primary-color);
-            font-weight: bold;
-            z-index: 1000;
-        }
-        
-        /* Contenedor del footer */
-        .footer-container {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            padding: 10px;
-            z-index: 1000;
-        }
-        .footer img {
-            max-width: 200px;
-        }
-        
-        /* Estilos de login */
-        .login-box {
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 10px;
-        }
-        div[data-testid="stTextInput"] input {
-            max-width: 200px !important;
-            display: block;
-        }
-        div[data-testid="stTextInput"] {
-            max-width: 280px !important;
-            margin: 0 auto !important;
-        }
-        button[kind="primary"] {
-            max-width: 120px !important;
-            margin: 0 auto !important;
-            display: block !important;
-        }
-        div[data-baseweb="notification"] {
-            width: 100% !important;
-            max-width: 300px !important;
-            margin: 0 auto !important;
-        }
-        
-        /* Estilos globales */
-        .stTextInput input, .stTextInput label {
-            color: var(--primary-color) !important;
-            font-size: 0.9em !important;
-            max-width: 200px !important;
-        }
-        
-        /* Color global de texto */
-        .st-emotion-cache-*, div, p, h1, h2, h3, label {
-            color: var(--primary-color) !important;
-        }
-        
-        /* Contenedores flexibles responsivos */
-        .responsive-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-md);
-        }
-        
-        /* Reducir espaciado general en toda la aplicación */
-        .block-container {
-            padding-top: var(--spacing-sm) !important;
-            padding-bottom: 0 !important;
-            margin-top: -15px !important;
-        }
-    
-        /* Reducir espacios entre elementos */
-        div[data-testid="stVerticalBlock"] > div {
-            margin-bottom: 0.2rem !important;
-        }
-    
-        /* Reducir tamaño de títulos */
-        h1 {
-            font-size: 1.8rem !important;
-            margin-bottom: 0.2rem !important;
-        }
-    
-        h2 {
-            font-size: 1.5rem !important;
-            margin-bottom: 0.2rem !important;
-        }
-    
-        h3, h4, h5 {
-            font-size: 1.2rem !important;
-            margin-bottom: 0.1rem !important;
-        }
-    
-        /* Reducir espacio en elementos de formulario */
-        div[data-testid="stFormSubmitButton"] {
-            margin-top: var(--spacing-sm) !important;
-        }
-    
-        /* Compactar selectores múltiples */
-        div[data-testid="stMultiSelect"] {
-            margin-bottom: 0.3rem !important;
-        }
-                
-        /* Ajustar espacio del encabezado */
-        div.stHorizontalBlock:first-child {
-            margin-top: 15px !important;
-            padding-top: 10px !important;
-        }
-    
-        /* Ajustar espacio para el logo */
-        div.stHorizontalBlock:first-child div.column:nth-child(2) {
-            padding-top: 10px !important;
-        }
-        
-        /* Estilos para botones de navegación y acción */
-        .nav-button, .action-button {
-            background-color: var(--primary-color) !important;
-            color: white !important;
+        /* Configuración global para texto */
+        h1, h2, h3, h4, h5, h6, p, div, span, label, input, button {
+            color: var(--text-color) !important;
             font-weight: bold !important;
-            border-radius: 5px !important;
-            padding: 0.5rem 1rem !important;
-            margin: 0.3rem !important;
-            text-align: center !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
         }
         
-        .nav-button:hover, .action-button:hover {
-            opacity: 0.9 !important;
-            transform: scale(1.02) !important;
+        /* Estilo para la sidebar */
+        [data-testid="stSidebar"] {
+            background-color: var(--sidebar-background-color) !important;
+            border-radius: var(--border-radius) !important;
+            border-right: 6px !important;
+            padding: 20px;
+        }
+
+        [data-testid="stSidebar"] h1, 
+        [data-testid="stSidebar"] h2, 
+        [data-testid="stSidebar"] h3, 
+        [data-testid="stSidebar"] p {
+            color: var(--sidebar-text-color) !important;
         }
         
-        /* Estilos específicos para componentes de análisis */
-        .metrics-container {
-            background-color: #f5f5f5 !important;
-            border-radius: 10px !important;
-            padding: 1rem !important;
-            margin-bottom: 1rem !important;
+        /* Forzar el color de fondo en todos los contenedores */
+        .block-container, div.stTabs [data-baseweb="tab-panel"] {
+            background-color: var(--background-color) !important;
+        }
+        
+        /* Eliminar espacios extras */
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+        }
+        
+        div[data-testid="stVerticalBlock"] > div {
+            margin-bottom: 0.3rem;
+            background-color: var(--background-color) !important;
+        }
+        
+        /* Contenedores específicos */
+        .metric-card {
+            background-color: white !important;
+            border-radius: var(--border-radius) !important;
+            padding: 15px !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+            margin-bottom: 10px !important;
+        }
+        
+        .metric-title {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .player-selector {
+            background-color: var(--secondary-background) !important;
+            padding: 15px !important;
+            border-radius: var(--border-radius) !important;
+            margin-bottom: 15px !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+        }
+        
+        .visualization-container {
+            background-color: white !important;
+            padding: 15px !important;
+            border-radius: var(--border-radius) !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+        }
+        
+        /* Estilo para los selectores */
+        .stSelectbox, .stSlider, .stTextInput input, .stMultiSelect {
+            background-color: white !important;
+            color: var(--text-color) !important;
+            border: 6px !important;
+            border-radius: var(--border-radius) !important;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+            padding: 8px !important;
+        }
+
+        /* Estilo para texto dentro de selectores */
+        .stSelectbox div[data-baseweb="select"] span,
+        .stMultiSelect div[data-baseweb="select"] span,
+        div[role="listbox"] ul li {
+            color: var(--text-color) !important;
+            background-color: white !important;
+        }
+
+        /* Estilos para opciones en listas desplegables */
+        div[data-baseweb="popover"],
+        div[data-baseweb="select"] div[role="listbox"],
+        div[data-baseweb="select"] div[role="listbox"] ul {
+            background-color: white !important;
+        }
+
+        /* Botones generales */
+        .stButton button, .stFormSubmitButton button {
+            background-color: var(--button-background-color) !important;
+            color: var(--text-color) !important;
+            font-weight: bold !important;
+            border-radius: var(--border-radius) !important;
+            padding: 0.6rem 1.2rem !important;
+            border: 6px !important;
+            transition: background-color 0.3s ease-in-out !important;
+        }
+
+        .stButton button:hover, .stFormSubmitButton button:hover {
+            background-color: var(--button-hover-color) !important;
         }
         
-        /* Ajustes responsivos mejorados */
-        @media (max-width: 1200px) {
-            .main-title { font-size: 2.2em; }
-            .subtitle { font-size: 1.6em; }
-            .responsive-container > div {
-                flex: 1 1 48%;
-            }
+        /* Estilo específico para botón PDF */
+        .pdf-button button {
+            background-color: var(--pdf-button-background) !important;
+            color: var(--pdf-button-text) !important;
         }
         
+        .pdf-button button:hover {
+            background-color: var(--primary-color) !important;
+            opacity: 0.9 !important;
+        }
+        
+        /* Estilos para los tabs */
+        .stTabs [data-baseweb="tab-list"] {
+            background-color: var(--background-color) !important;
+            gap: 1px;
+        }
+        
+        .stTabs [data-baseweb="tab"] {
+            background-color: var(--secondary-background) !important;
+            color: var(--text-color) !important;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: var(--border-radius) !important;
+        }
+        
+        .stTabs [data-baseweb="tab"][aria-selected="true"] {
+            background-color: var(--sidebar-background-color) !important;
+            font-weight: bold !important;
+        }
+        
+        /* Estilos para tablas */
+        .stTable, [data-testid="stTable"], .stDataFrame [data-testid="stDataFrameResizable"] {
+            border: 6px !important;
+            border-radius: var(--border-radius) !important;
+            overflow: hidden !important;
+        }
+
+        /* Para los encabezados de tabla */
+        .stDataFrame thead tr th {
+            background-color: var(--sidebar-background-color) !important;
+            color: var(--text-color) !important;
+            font-weight: bold !important;
+        }
+
+        /* Para los encabezados de tabla */
+        .stDataFrame thead tr th {
+            background-color: var(--sidebar-background-color) !important;
+            color: var(--text-color) !important;
+            font-weight: bold !important;
+        }
+
+        /* Para las filas alternadas */
+        .stDataFrame tbody tr:nth-child(even) {
+            background-color: var(--secondary-background) !important;
+        }
+
+        /* Ajustes para encabezados y textos principales */
+        h1, h2, h3, .main-title {
+            color: var(--text-color) !important;
+            font-weight: bold !important;
+        }
+
+        /* Espacio para título y logo */
+        div.stHorizontalBlock {
+            padding-top: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        /* Clases para tendencias */
+        .trend-up {
+            color: #4CAF50 !important;
+        }
+        
+        .trend-down {
+            color: #F44336 !important;
+        }
+        
+        /* Estilos para dataframes */
+        .stDataFrame {
+            border-radius: var(--border-radius) !important;
+        }
+        
+        /* Forzar que el footer aparezca y tenga el color correcto */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: var(--secondary-background);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color) !important;
+        }
+        
+        .footer-container div {
+            color: var(--text-color) !important;
+            font-size: 14px !important;
+        }
+
+        /* Ajustes responsivos */
         @media (max-width: 768px) {
             .main-title { font-size: 1.8em; }
-            .subtitle { font-size: 1.4em; }
-            div[data-testid="stImage"] img { max-width: 150px !important; }
-            .responsive-container > div {
-                flex: 1 1 100%;
-            }
+            div[data-testid="stImage"] img { max-width: 80px !important; }
         }
-        
-        @media (max-width: 480px) {
-            .main-title { font-size: 1.5em; }
-            .subtitle { font-size: 1.2em; }
-            div[data-testid="stImage"] img { max-width: 100px !important; }
-            
-            /* Ajustes para footer en móvil */
-            .footer-container {
-                position: relative;
-                margin-top: 2rem;
-                right: auto;
-                bottom: auto;
-            }
-            .footer img {
-                max-width: 150px;
-            }
-            
-            /* Ajustes para autor en móvil */
-            .author-container {
-                position: relative;
-                margin-top: 1rem;
-                right: auto;
-                bottom: auto;
-            }
+                
+        /* Estilos para tarjetas de jugadores */
+        .player-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
+
+        .player-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .player-position {
+            background-color: var(--pdf-button-background);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .player-team {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .player-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .player-stat-label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .player-stat-value {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .player-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
         </style>
     """, unsafe_allow_html=True)

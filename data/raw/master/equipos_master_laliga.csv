@@ -1,21 +1,21 @@
 ﻿nombre;shortname;id_streamlit;id_fbref;id_whoscored;id_fotmob;id_understat;id_sofascore;ruta_escudo;id_transfermarkt
-Deportivo Alaves;ALA;1;https://fbref.com/es/equipos/8d6fd021/Estadisticas-de-Alaves;60;9866;https://understat.com/team/Alaves/2024;2885;assets/escudos/ala.png;1108
-Atletico de Madrid;ATM;2;https://fbref.com/es/equipos/db3b9613/Estadisticas-de-Atletico-Madrid;63;9906;https://understat.com/team/Atletico_Madrid/2024;2836;assets/escudos/atm.png;13
-Athletic Club;ATH;3;https://fbref.com/es/equipos/2b390eca/Estadisticas-de-Athletic-Club;53;8315;https://understat.com/team/Athletic_Club/2024;2825;assets/escudos/ath.png;621
-FC Barcelona;FCB;4;https://fbref.com/es/equipos/206d90db/Estadisticas-de-Barcelona;65;8634;https://understat.com/team/Barcelona/2024;2817;assets/escudos/fcb.png;131
-RC Celta de Vigo;CEL;5;https://fbref.com/es/equipos/f25da7fb/Estadisticas-de-Celta-Vigo;62;9910;https://understat.com/team/Celta_Vigo/2024;2821;assets/escudos/cel.png;940
-RCD Español; ESP;6;https://fbref.com/es/equipos/a8661628/Estadisticas-de-Espanyol;70;8558;https://understat.com/team/Espanyol/2024;2814;assets/escudos/esp.png;714
-Getafe CF; GET;7;https://fbref.com/es/equipos/7848bd64/Estadisticas-de-Getafe;819;8305;https://understat.com/team/Getafe/2024;2859;assets/escudos/get.png;3709
-Girona FC;GIR;8;https://fbref.com/es/equipos/9024a00a/Estadisticas-de-Girona;2783;7732;https://understat.com/team/Girona/2024;24264;assets/escudos/gir.png;12321
-CD Leganes;LEG;9;https://fbref.com/es/equipos/7c6f2c78/Estadisticas-de-Leganes;825;7854;https://understat.com/team/Leganes/2024;2845;assets/escudos/leg.png;1244
-RCD Mallorca;MLL;10;https://fbref.com/es/equipos/2aa12281/Estadisticas-de-Mallorca;51;8661;https://understat.com/team/Mallorca/2024;2826;assets/escudos/mll.png;237
-CA Osasuna;OSA;11;https://fbref.com/es/equipos/03c57e2b/Estadisticas-de-Osasuna;131;8371;https://understat.com/team/Osasuna/2024;2820;assets/escudos/osa.png;331
-Rayo Vallecano;RAY;12;https://fbref.com/es/equipos/98e8af82/Estadisticas-de-Rayo-Vallecano;64;8370;https://understat.com/team/Rayo_Vallecano/2024;2818;assets/escudos/ray.png;367
-Real Betis;BET;13;https://fbref.com/es/equipos/fc536746/Estadisticas-de-Real-Betis;54;8603;https://understat.com/team/Real_Betis/2024;2816;assets/escudos/bet.png;150
-Real Madrid;RMA;14;https://fbref.com/es/equipos/53a2f082/Estadisticas-de-Real-Madrid;52;8633;https://understat.com/team/Real_Madrid/2024;2829;assets/escudos/rma.png;418
-Real Sociedad;RSO;15;https://fbref.com/es/equipos/e31d1cd9/Estadisticas-de-Real-Sociedad;68;8560;https://understat.com/team/Real_Sociedad/2024;2824;assets/escudos/rso.png;681
-Real Valladolid;RVL;16;https://fbref.com/es/equipos/17859612/Estadisticas-de-Valladolid;58;10281;https://understat.com/team/Real_Valladolid/2024;2831;assets/escudos/rvl.png;366
-Sevilla FC;SEV;17;https://fbref.com/es/equipos/ad2be733/Estadisticas-de-Sevilla;67;8302;https://understat.com/team/Sevilla/2024;2833;assets/escudos/sev.png;368
-UD Las Palmas;LPM;18;https://fbref.com/es/equipos/0049d422/Estadisticas-de-Las-Palmas;838;8306;https://understat.com/team/Las_Palmas/2024;6577;assets/escudos/lpm.png;472
-Valencia CF; VAL;19;https://fbref.com/es/equipos/dcc91a7b/Estadisticas-de-Valencia;55;10267;https://understat.com/team/Valencia/2024;2828;assets/escudos/val.png;1049
-Villarreal CF;VIL;20;https://fbref.com/es/equipos/2a8183b3/Estadisticas-de-Villarreal;839;10205;https://understat.com/team/Villarreal/2024;2819;assets/escudos/vil.png;1050
+Deportivo Alaves;ALA;1;https://fbref.com/es/equipos/8d6fd021/Estadisticas-de-Alaves;60;9866;https://understat.com/team/Alaves/2024;2885;assets/images/logos/ala.png;1108
+Atletico de Madrid;ATM;2;https://fbref.com/es/equipos/db3b9613/Estadisticas-de-Atletico-Madrid;63;9906;https://understat.com/team/Atletico_Madrid/2024;2836;assets/images/logos/atm.png;13
+Athletic Club;ATH;3;https://fbref.com/es/equipos/2b390eca/Estadisticas-de-Athletic-Club;53;8315;https://understat.com/team/Athletic_Club/2024;2825;assets/images/logos/ath.png;621
+FC Barcelona;FCB;4;https://fbref.com/es/equipos/206d90db/Estadisticas-de-Barcelona;65;8634;https://understat.com/team/Barcelona/2024;2817;assets/images/logos/fcb.png;131
+RC Celta de Vigo;CEL;5;https://fbref.com/es/equipos/f25da7fb/Estadisticas-de-Celta-Vigo;62;9910;https://understat.com/team/Celta_Vigo/2024;2821;assets/images/logos/cel.png;940
+RCD Español;ESP;6;https://fbref.com/es/equipos/a8661628/Estadisticas-de-Espanyol;70;8558;https://understat.com/team/Espanyol/2024;2814;assets/images/logos/esp.png;714
+Getafe CF;GET;7;https://fbref.com/es/equipos/7848bd64/Estadisticas-de-Getafe;819;8305;https://understat.com/team/Getafe/2024;2859;assets/images/logos/get.png;3709
+Girona FC;GIR;8;https://fbref.com/es/equipos/9024a00a/Estadisticas-de-Girona;2783;7732;https://understat.com/team/Girona/2024;24264;assets/images/logos/gir.png;12321
+CD Leganes;LEG;9;https://fbref.com/es/equipos/7c6f2c78/Estadisticas-de-Leganes;825;7854;https://understat.com/team/Leganes/2024;2845;assets/images/logos/leg.png;1244
+RCD Mallorca;MLL;10;https://fbref.com/es/equipos/2aa12281/Estadisticas-de-Mallorca;51;8661;https://understat.com/team/Mallorca/2024;2826;assets/images/logos/mll.png;237
+CA Osasuna;OSA;11;https://fbref.com/es/equipos/03c57e2b/Estadisticas-de-Osasuna;131;8371;https://understat.com/team/Osasuna/2024;2820;assets/images/logos/osa.png;331
+Rayo Vallecano;RAY;12;https://fbref.com/es/equipos/98e8af82/Estadisticas-de-Rayo-Vallecano;64;8370;https://understat.com/team/Rayo_Vallecano/2024;2818;assets/images/logos/ray.png;367
+Real Betis;BET;13;https://fbref.com/es/equipos/fc536746/Estadisticas-de-Real-Betis;54;8603;https://understat.com/team/Real_Betis/2024;2816;assets/images/logos/bet.png;150
+Real Madrid;RMA;14;https://fbref.com/es/equipos/53a2f082/Estadisticas-de-Real-Madrid;52;8633;https://understat.com/team/Real_Madrid/2024;2829;assets/images/logos/rma.png;418
+Real Sociedad;RSO;15;https://fbref.com/es/equipos/e31d1cd9/Estadisticas-de-Real-Sociedad;68;8560;https://understat.com/team/Real_Sociedad/2024;2824;assets/images/logos/rso.png;681
+Real Valladolid;RVL;16;https://fbref.com/es/equipos/17859612/Estadisticas-de-Valladolid;58;10281;https://understat.com/team/Real_Valladolid/2024;2831;assets/images/logos/rvl.png;366
+Sevilla FC;SEV;17;https://fbref.com/es/equipos/ad2be733/Estadisticas-de-Sevilla;67;8302;https://understat.com/team/Sevilla/2024;2833;assets/images/logos/sev.png;368
+UD Las Palmas;LPM;18;https://fbref.com/es/equipos/0049d422/Estadisticas-de-Las-Palmas;838;8306;https://understat.com/team/Las_Palmas/2024;6577;assets/images/logos/lpm.png;472
+Valencia CF;VAL;19;https://fbref.com/es/equipos/dcc91a7b/Estadisticas-de-Valencia;55;10267;https://understat.com/team/Valencia/2024;2828;assets/images/logos/val.png;1049
+Villarreal CF;VIL;20;https://fbref.com/es/equipos/2a8183b3/Estadisticas-de-Villarreal;839;10205;https://understat.com/team/Villarreal/2024;2819;assets/images/logos/vil.png;1050

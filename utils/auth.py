@@ -33,14 +33,17 @@ def update_last_activity():
 
 def login():
     """Maneja la autenticación del usuario"""
-    
+        
     # Creamos un formulario que se puede enviar con Enter
     with st.form(key="login_form"):
-        username = st.text_input("Usuario", key="username_input")
-        password = st.text_input("Contraseña", type="password", key="password_input")
+        username = st.text_input("Usuario", key="username_input", placeholder="Ingresa tu usuario")
+        password = st.text_input("Contraseña", type="password", key="password_input", placeholder="Ingresa tu contraseña")
         
-        # El botón de submit del formulario (se activa con Enter o clic)
-        submit_button = st.form_submit_button("Iniciar Sesión")
+        # Centrar el botón
+        cols = st.columns([1, 2, 1])
+        with cols[1]:
+            # El botón de submit del formulario (se activa con Enter o clic)
+            submit_button = st.form_submit_button("Iniciar Sesión")
         
         # Procesamiento del formulario (se ejecuta cuando se presiona Enter o se hace clic en el botón)
         if submit_button:
@@ -53,6 +56,9 @@ def login():
                 st.session_state.role = user['role']
                 st.session_state.player_id = user['player_id']
                 st.session_state.last_activity = datetime.now()
+
+                # Añadir parámetro a la URL para ayudar a mantener la sesión
+                st.query_params["authenticated"] = "true"
                 
                 # Mensaje de éxito
                 st.success(f"¡Bienvenido, {user['name']}!", icon="✅")
@@ -71,14 +77,18 @@ def logout():
         if key in st.session_state:
             del st.session_state[key]
     
-    st.switch_page("app.py")
+    st.switch_page("ATMapp.py")
 
 def check_auth():
     """Verifica autenticación y timeout"""
     if "authentication_status" in st.session_state and st.session_state.authentication_status:
+        
         if check_session_timeout():
             update_last_activity()
             return True
+        
+        else:
+            st.write("Autenticación fallida o expiración de sesión")  # Mensaje de depuración
     return False
 
 def get_user_role():
@@ -102,7 +112,7 @@ def get_player_id():
 def check_admin_access():
     """Verifica si el usuario tiene acceso de administrador"""
     role = get_user_role()
-    return role in ["admin", "Director"]
+    return role in ["admin", "Profesor", "Alumno"]
 
 def check_player_access():
     """Verifica si el usuario es un jugador"""

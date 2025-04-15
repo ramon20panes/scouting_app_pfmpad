@@ -1,12 +1,16 @@
-# common/session.py
 import streamlit as st
 
 def init_session_state():
     """Inicializa todas las variables de estado de la sesión"""
     
-    # Estado de autenticación
+    # Estado de autenticación - usar st.query_params para persistencia
     if "authentication_status" not in st.session_state:
-        st.session_state.authentication_status = False
+        # Intentar recuperar estado de autenticación en caso de refresco
+        try:
+            if "authenticated" in st.query_params and st.query_params["authenticated"] == "true":
+                st.session_state.authentication_status = True
+        except:
+            st.session_state.authentication_status = False
     
     # Información del usuario
     if "username" not in st.session_state:
