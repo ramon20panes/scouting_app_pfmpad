@@ -129,12 +129,12 @@ else:
         if os.path.exists(hidden_path):
             os.rename(hidden_path, original_path)
 
-   # Redirección tras login
+    # Redirección tras login
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
         try:
             target_page = st.session_state.redirect_to
-            st.session_state.redirect_to = None
-            st.switch_page(f"pages/{target_page}")
+            st.switch_page(f"pages/{target_page}")  # ✅ Primero redirigimos
+            st.session_state.redirect_to = None     # ✅ Luego la limpiamos
         except Exception as e:
             st.error(f"Error al redirigir: {e}")
 
