@@ -19,7 +19,7 @@ from utils.auth import get_user_role, get_user_name
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Atlético de Madrid 24/25",
+    page_title="Datos condicionales",
     page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded"

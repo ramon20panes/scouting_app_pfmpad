@@ -17,7 +17,7 @@ from utils.export_pdf import export_to_pdf, dataframe_a_pdf_contenido
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Atlético de Madrid 24/25",
+    page_title="Match_Atlético de Madrid 24/25",
     page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded"
