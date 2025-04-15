@@ -65,7 +65,7 @@ def login():
                 time.sleep(0.8)
                 
                 # Redirección a la primera página
-                st.session_state.redirect_to = "1_Team_stats"
+                st.session_state.redirect_to = "1_Team_stats.py"
                 st.rerun()
             else:
                 logging.warning(f"Intento de login fallido para usuario: {username}")
