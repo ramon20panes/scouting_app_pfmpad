@@ -71,22 +71,21 @@ Sistema de autenticación por roles:
 
 ├── streamlit/ │ └── secrets.toml
 
-![Estructura](image.png)
-
 
 ---
 
 ## ▶️ Cómo Ejecutar la App
 
-# 1. Crear entorno virtual
+### 1. Crear entorno virtual
 python -m venv ent_mod11
 ent_mod11\Scripts\activate # o en Mac ssource ent_mod11/bin/activate
 
-# 2. Instalar dependencias
+### 2. Instalar dependencias
 pip install -r requirements.txt
 
-# 3. Ejecutar Streamlit
+### 3. Ejecutar Streamlit
 streamlit run ATMapp.py
+
 
 
 ## 🌐 Despliegue
@@ -98,18 +97,19 @@ streamlit run ATMapp.py
 ### 📦 Organización modular para integraciones externas
 
 
+
 ## **📄 Autores y Créditos**
 
-👨‍🏫 Ramón González
+### 👨‍🏫 Ramón González
 
-Máster PFMPAD – Módulo 11
+### Máster PFMPAD – Módulo 11
 
 
 ## **Agradecimientos**
 
-[Lucas Bracamonte](https://www.linkedin.com/in/lucas-braca?originalSubdomain=ar)
+### [Lucas Bracamonte](https://www.linkedin.com/in/lucas-braca?originalSubdomain=ar)
 
 
-[Sport Data Campus](https://www.linkedin.com/school/sports-data-campus/?trk=publ)
+### [Sport Data Campus](https://www.linkedin.com/school/sports-data-campus/?trk=publ)
 
 
