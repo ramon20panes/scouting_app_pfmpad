@@ -116,14 +116,14 @@ else:
 
     # Ocultar página 7 si el usuario es jugador
     if get_user_role() == "player":
-        page_7_path = "pages/7_👥_Similar_players.py"
+        page_7_path = "pages/7_Similar_players.py"
         hidden_path = page_7_path + ".hide"
 
         if os.path.exists(page_7_path):
             os.rename(page_7_path, hidden_path)
     else:
         # Restaurar la página si está oculta y el usuario no es jugador
-        hidden_path = "pages/7_👥_Similar_players.py.hide"
+        hidden_path = "pages/7_Similar_players.py.hide"
         original_path = hidden_path.replace(".hide", "")
 
         if os.path.exists(hidden_path):
@@ -131,8 +131,12 @@ else:
 
    # Redirección tras login
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
-        st.switch_page(st.session_state.redirect_to)
-        st.session_state.redirect_to = None
+        try:
+            target_page = st.session_state.redirect_to
+            st.session_state.redirect_to = None
+            st.switch_page(f"pages/{target_page}")
+        except Exception as e:
+            st.error(f"Error al redirigir: {e}")
 
 # Espacio antes del footer
 st.markdown('<div style="margin-top: 30px;"></div>', unsafe_allow_html=True)
