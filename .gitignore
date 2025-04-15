@@ -18,13 +18,13 @@ __pycache__/
 *.db
 *.sqlite
 *.sqlite3
-data/raw/ATM_condic_24_25.db
 create_db.py
-utils/db.py
 
 # Excepción: este archivo sí se sube
 !data/raw/base_atleti_streamlit.db
 !data/auth/scouters_auth.db
+!utils/db.py
+!data/raw/ATM_condic_24_25.db
 
 # Logs
 *.log
