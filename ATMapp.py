@@ -133,6 +133,7 @@ else:
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
         try:
             target_page = st.session_state.redirect_to
+            st.write(f"Intentando redirigir a: {target_page}")
             st.switch_page(f"pages/{target_page}")  
             st.session_state.redirect_to = None
         except Exception as e:

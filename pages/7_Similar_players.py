@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import unicodedata
+from utils.auth import logout
 
 # Configuración de la página debe ser lo primero
 st.set_page_config(

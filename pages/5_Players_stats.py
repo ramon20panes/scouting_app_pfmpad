@@ -12,7 +12,7 @@ import sys
 import statsmodels 
 
 # Importación utilidades
-from utils.auth import check_auth
+from utils.auth import check_auth, logout
 from utils.styles import load_all_styles
 from utils.players_stats import load_player_data, calculate_improvement, plot_player_metric, generate_rankings
 

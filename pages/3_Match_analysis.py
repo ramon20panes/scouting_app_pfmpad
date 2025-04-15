@@ -7,7 +7,7 @@ from pathlib import Path
 import traceback
 import os
 import sys
-from utils.auth import check_auth
+from utils.auth import check_auth, logout
 from utils.styles import load_all_styles
 from utils.visualization_3 import plot_team_metrics, fotmob_match_momentum_plot_atletico, pass_network_visualization
 from utils.visualization_3 import preprocess_xg_data, plot_xg_timeline, plot_shot_map

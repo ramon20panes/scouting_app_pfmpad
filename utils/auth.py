@@ -77,7 +77,7 @@ def logout():
         if key in st.session_state:
             del st.session_state[key]
     
-    st.switch_page("ATMapp")
+    st.switch_page("ATMapp.py")
 
 def check_auth():
     """Verifica autenticación y timeout"""

@@ -11,7 +11,7 @@ import sys
 import random
 import time
 from typing import Dict, List, Tuple, Any, Optional
-from utils.auth import check_auth
+from utils.auth import check_auth, logout
 from utils.styles import load_all_styles
 from utils.export_pdf import export_to_pdf, dataframe_a_pdf_contenido
 
