@@ -132,8 +132,8 @@ else:
     # Redirección tras login
     if "redirect_to" in st.session_state and st.session_state.redirect_to:
         try:
-            # Forzar el valor correcto ignorando redirect_to
-            st.switch_page("pages/1_Team_stats.py")  
+            # El formato correcto es con el prefijo "pages/"
+            st.switch_page("pages/1_Team_stats.py")
             st.session_state.redirect_to = None
         except Exception as e:
             st.error(f"Error al redirigir: {e}")
