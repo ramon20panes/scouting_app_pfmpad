@@ -141,7 +141,7 @@ def app():
     with col_minutes:
         st.markdown("<h4>Rango minutos:</h4>", unsafe_allow_html=True)
         min_minutes, max_minutes = st.slider(
-            " ", 0, 2700, (0, 2700),
+            " ", 0, 3420, (0, 3420),
             key="minutes_range", label_visibility="collapsed"
         )
 

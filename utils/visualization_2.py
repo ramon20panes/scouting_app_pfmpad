@@ -284,7 +284,7 @@ def create_match_timeline(df_tm, team_mapping):
         
         # Añadir barra roja para derrotas
         if row['result'] == 'L':
-            ax.vlines(x=row['jornada'], ymin=-0.3, ymax=0, color='red', linewidth=8)
+            ax.vlines(x=row['jornada'], ymin=-0.4, ymax=0, color='red', linewidth=8)
 
         y_pos = height + 0.1
         
@@ -349,9 +349,9 @@ def create_match_timeline(df_tm, team_mapping):
     ax.set_yticklabels(['0', '1', '3'])  # Etiquetas vacías para quitar los números
     ax.tick_params(axis='y', colors='darkblue', size=0)
 
-    # Ajustar eje X para mostrar solo jornadas del 1 al 25
-    ax.set_xticks(range(1, 27))
-    ax.set_xticklabels(range(1, 27), color='darkblue', size=8, weight='bold') 
+    # Ajustar eje X para mostrar solo jornadas disputadas
+    ax.set_xticks(range(1, 34))
+    ax.set_xticklabels(range(1, 34), color='darkblue', size=8, weight='bold') 
     ax.tick_params(axis='x', colors='darkblue', size=0)
 
     # Título personalizado
