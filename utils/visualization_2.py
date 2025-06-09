@@ -350,8 +350,8 @@ def create_match_timeline(df_tm, team_mapping):
     ax.tick_params(axis='y', colors='darkblue', size=0)
 
     # Ajustar eje X para mostrar solo jornadas disputadas
-    ax.set_xticks(range(1, 34))
-    ax.set_xticklabels(range(1, 34), color='darkblue', size=8, weight='bold') 
+    ax.set_xticks(range(1, 39))
+    ax.set_xticklabels(range(1, 39), color='darkblue', size=8, weight='bold') 
     ax.tick_params(axis='x', colors='darkblue', size=0)
 
     # Título personalizado

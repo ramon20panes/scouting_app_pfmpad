@@ -19,20 +19,20 @@ Jornada,Partido,Equipo,Resultado,Goles,Tiros a Puerta,Tiros Fuera,Tiros Totales,
 9,Real Sociedad-Atletico Madrid,Atletico Madrid,1-1,1,1,3,4,0,2,2,9,1,2,33.0,2,0,6,333,243,73.0,0.54,0
 10,Atletico Madrid-Leganes,Atletico Madrid,3-1,3,9,8,24,7,15,9,14,8,0,63.0,5,0,1,568,484,85.0,4.51,0
 10,Atletico Madrid-Leganes,Leganes,3-1,1,2,1,5,2,2,3,8,2,1,37.0,1,0,5,341,260,76.0,0.24,0
-11,Real Betis-Atletico Madrid,Atletico Madrid,1-0,0,3,4,10,3,8,2,4,10,1,58.0,2,0,3,533,415,78.0,0.54,0
 11,Real Betis-Atletico Madrid,Real Betis,1-0,1,3,17,24,4,16,8,8,3,3,42.0,3,0,3,380,300,79.0,1.94,0
-12,Atletico Madrid-Las Palmas,Las Palmas,2-0,0,1,0,1,0,1,0,13,1,0,43.0,1,0,1,410,314,77.0,0.02,0
+11,Real Betis-Atletico Madrid,Atletico Madrid,1-0,0,3,4,10,3,8,2,4,10,1,58.0,2,0,3,533,415,78.0,0.54,0
 12,Atletico Madrid-Las Palmas,Atletico Madrid,2-0,2,3,8,15,4,11,4,13,9,1,57.0,1,0,1,541,455,84.0,1.63,0
+12,Atletico Madrid-Las Palmas,Las Palmas,2-0,0,1,0,1,0,1,0,13,1,0,43.0,1,0,1,410,314,77.0,0.02,0
 13,Mallorca-Atletico Madrid,Atletico Madrid,0-1,1,2,4,9,3,4,5,16,2,1,47.0,3,0,5,479,423,88.0,0.65,0
 13,Mallorca-Atletico Madrid,Mallorca,0-1,0,6,5,13,2,11,2,10,7,3,53.0,1,0,1,530,475,90.0,0.61,0
 14,Atletico Madrid-Alaves,Alaves,2-1,1,1,1,4,2,1,3,19,0,2,30.0,3,0,6,258,175,68.0,0.86,0
 14,Atletico Madrid-Alaves,Atletico Madrid,2-1,2,8,1,11,2,6,5,18,5,3,70.0,3,0,0,591,505,85.0,1.65,0
 15,Valladolid-Atletico Madrid,Atletico Madrid,0-5,5,9,2,13,2,10,3,11,5,3,55.0,2,0,1,608,532,88.0,3.99,0
 15,Valladolid-Atletico Madrid,Valladolid,0-5,0,1,5,9,3,7,2,6,3,1,45.0,1,0,4,479,410,86.0,0.47,0
-16,Atletico Madrid-Sevilla,Atletico Madrid,4-3,4,9,4,14,1,10,4,11,5,1,57.0,4,0,0,666,566,85.0,2.04,-1
 16,Atletico Madrid-Sevilla,Sevilla,4-3,3,3,1,4,0,3,1,8,3,0,43.0,3,0,5,514,422,82.0,0.39,-1
-17,Atletico Madrid-Getafe,Getafe,1-0,0,1,3,7,3,3,4,15,3,0,43.0,1,0,2,374,279,75.0,0.21,0
+16,Atletico Madrid-Sevilla,Atletico Madrid,4-3,4,9,4,14,1,10,4,11,5,1,57.0,4,0,0,666,566,85.0,2.04,-1
 17,Atletico Madrid-Getafe,Atletico Madrid,1-0,1,3,6,11,2,10,1,13,8,1,57.0,3,0,1,489,400,82.0,1.67,0
+17,Atletico Madrid-Getafe,Getafe,1-0,0,1,3,7,3,3,4,15,3,0,43.0,1,0,2,374,279,75.0,0.21,0
 18,Barcelona-Atletico Madrid,Barcelona,1-2,1,7,6,19,6,14,5,11,11,2,63.0,0,0,2,647,579,89.0,2.54,0
 18,Barcelona-Atletico Madrid,Atletico Madrid,1-2,2,4,1,5,0,2,3,8,3,4,37.0,3,0,6,392,305,78.0,0.63,0
 19,Atletico Madrid-Osasuna,Atletico Madrid,1-0,1,5,3,9,1,9,0,8,4,1,51.0,2,0,1,555,472,85.0,2.54,1
@@ -49,19 +49,29 @@ Jornada,Partido,Equipo,Resultado,Goles,Tiros a Puerta,Tiros Fuera,Tiros Totales,
 24,Atletico Madrid-Celta Vigo,Atletico Madrid,1-1,1,3,2,9,4,8,1,8,2,1,33.0,3,1,3,314,247,79.0,0.55,0
 25,Valencia-Atletico Madrid,Atletico Madrid,0-3,3,3,4,11,4,8,3,16,0,2,51.0,3,0,2,578,507,88.0,1.28,0
 25,Valencia-Atletico Madrid,Valencia,0-3,0,2,9,18,7,10,8,18,7,0,49.0,1,0,0,525,482,92.0,0.86,0
-26,Atletico Madrid-Athletic Club,Athletic Club,1-0,0,3,6,15,6,11,4,8,2,0,49.0,3,0,3,480,401,84.0,1.12,0
 26,Atletico Madrid-Athletic Club,Atletico Madrid,1-0,1,4,5,12,3,10,2,7,6,4,51.0,2,0,3,487,406,83.0,2.25,0
+26,Atletico Madrid-Athletic Club,Athletic Club,1-0,0,3,6,15,6,11,4,8,2,0,49.0,3,0,3,480,401,84.0,1.12,0
 27,Getafe-Atletico Madrid,Atletico Madrid,2-1,1,2,0,4,2,4,0,14,4,4,61.0,2,1,1,511,431,84.0,0.97,0
 27,Getafe-Atletico Madrid,Getafe,2-1,2,3,4,11,4,7,4,10,4,2,39.0,6,0,1,315,235,75.0,1.19,0
 28,Atletico Madrid-Barcelona,Atletico Madrid,2-4,2,2,4,7,1,4,3,10,6,2,34.0,1,0,2,320,244,76.0,1.36,0
 28,Atletico Madrid-Barcelona,Barcelona,2-4,4,6,6,13,1,7,6,11,6,0,66.0,3,0,0,639,575,90.0,1.26,0
-29,Espanyol-Atletico Madrid,Atletico Madrid,1-1,1,2,5,13,6,6,7,14,3,5,61.0,1,0,0,626,545,87.0,0.64,0
 29,Espanyol-Atletico Madrid,Espanyol,1-1,1,1,4,8,3,4,4,12,4,0,39.0,2,0,1,398,327,82.0,0.94,0
-30,Sevilla-Atletico Madrid,Atletico Madrid,1-2,2,5,3,13,5,9,4,12,7,0,56.0,4,0,4,540,474,88.0,1.26,0
+29,Espanyol-Atletico Madrid,Atletico Madrid,1-1,1,2,5,13,6,6,7,14,3,5,61.0,1,0,0,626,545,87.0,0.64,0
 30,Sevilla-Atletico Madrid,Sevilla,1-2,1,6,5,11,0,7,4,14,7,0,44.0,1,0,3,429,361,84.0,0.73,0
+30,Sevilla-Atletico Madrid,Atletico Madrid,1-2,2,5,3,13,5,9,4,12,7,0,56.0,4,0,4,540,474,88.0,1.26,0
 31,Atletico Madrid-Valladolid,Valladolid,4-2,2,3,3,6,0,4,2,8,1,0,46.0,1,0,5,513,453,88.0,1.33,0
 31,Atletico Madrid-Valladolid,Atletico Madrid,4-2,4,9,10,24,5,14,10,11,5,2,54.0,1,0,1,595,543,91.0,3.62,0
 32,Las Palmas-Atletico Madrid,Las Palmas,1-0,1,2,2,8,4,4,4,13,4,0,41.0,3,0,2,379,302,80.0,0.61,0
 32,Las Palmas-Atletico Madrid,Atletico Madrid,1-0,0,2,4,7,1,7,0,13,4,1,59.0,1,0,1,544,453,83.0,0.8,0
 33,Atletico Madrid-Rayo Vallecano,Rayo Vallecano,3-0,0,5,5,12,2,5,7,15,3,3,58.0,2,0,2,572,523,91.0,0.73,0
 33,Atletico Madrid-Rayo Vallecano,Atletico Madrid,3-0,3,5,4,10,1,8,2,8,6,2,42.0,0,0,5,407,347,85.0,2.53,0
+34,Alaves-Atletico Madrid,Alaves,0-0,0,2,4,8,2,8,0,18,3,1,35.0,3,0,2,271,182,67.0,0.5,0
+34,Alaves-Atletico Madrid,Atletico Madrid,0-0,0,2,4,9,3,6,3,13,5,0,65.0,2,0,2,496,410,83.0,0.54,0
+35,Atletico Madrid-Real Sociedad,Real Sociedad,4-0,0,1,1,6,4,2,4,12,3,1,39.0,1,0,3,415,365,88.0,0.49,0
+35,Atletico Madrid-Real Sociedad,Atletico Madrid,4-0,4,7,5,13,1,8,5,7,3,3,61.0,0,0,1,662,605,91.0,1.33,0
+36,Osasuna-Atletico Madrid,Atletico Madrid,2-0,0,5,4,9,0,7,2,11,5,4,65.0,1,0,1,551,488,89.0,1.36,0
+36,Osasuna-Atletico Madrid,Osasuna,2-0,2,3,4,9,2,6,3,12,3,1,35.0,1,0,5,294,222,76.0,0.58,0
+37,Atletico Madrid-Real Betis,Real Betis,4-1,1,7,4,12,1,7,5,9,4,1,55.0,1,0,7,593,527,89.0,0.92,1
+37,Atletico Madrid-Real Betis,Atletico Madrid,4-1,4,11,7,20,2,17,3,12,7,2,45.0,1,0,6,473,404,85.0,4.86,1
+38,Girona-Atletico Madrid,Atletico Madrid,0-4,4,11,1,19,7,12,7,11,8,2,56.0,0,0,1,555,495,89.0,2.74,0
+38,Girona-Atletico Madrid,Girona,0-4,0,1,1,2,0,1,1,13,1,0,44.0,0,0,8,420,358,85.0,0.05,0
