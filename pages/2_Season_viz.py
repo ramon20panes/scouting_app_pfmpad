@@ -16,6 +16,7 @@ from utils.visualization_2 import create_bumpy_chart, create_match_timeline, plo
 from data.api_handlers.football_data_api import load_teams_mapping, get_atletico_matches
 from data.data_processing.understat_data import get_atletico_data
 from utils.export_pdf import export_to_pdf, dataframe_a_pdf_contenido
+from utils.visualization_2 import plot_acumulado_puntos_con_escudos
 
 # Configuración de la página
 st.set_page_config(
@@ -36,43 +37,44 @@ if not check_auth():
 # Ruta raíz al path para importar módulos
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# CSS personalizado para mejorar la visibilidad en los selectbox y otros widgets
 st.markdown("""
 <style>
-    /* Mejorar visibilidad en selectbox y inputs */
+    /* === ESTILO GENERAL DE SELECTBOX y MULTISELECT === */
     .stSelectbox div[data-baseweb="select"] span,
-    .stMultiSelect div[data-baseweb="select"] span {
-        color: black !important;
-        background-color: white !important;
-    }
-    
+    .stMultiSelect div[data-baseweb="select"] span,
     .stSelectbox div[data-baseweb="select"] div,
-    .stMultiSelect div[data-baseweb="select"] div {
-        background-color: white !important;
-    }
-    
+    .stMultiSelect div[data-baseweb="select"] div,
     .stSelectbox div[data-baseweb="select"] input,
     .stMultiSelect div[data-baseweb="select"] input {
-        color: black !important;
+        background-color: #d4d4d4 !important;
+        color: #272E61 !important;
+        font-weight: bold !important;
     }
-    
-    .stSlider div[data-baseweb="slider"] div {
-        background-color: white !important;
-    }
-    
-    /* Para asegurar que los textos en los dropdowns sean visibles */
+
+    /* Opciones del desplegable */
     div[role="listbox"] ul li {
-        color: black !important;
+        background-color: #d4d4d4 !important;
+        color: #272E61 !important;
+        font-weight: bold !important;
     }
-    
-    /* Para los textos dentro de inputs numéricos */
-    input[type="number"] {
-        color: black !important;
+
+    /* Chips de selección (en multiselect) */
+    div[data-baseweb="tag"] {
+        background-color: #272E61 !important;
+        color: white !important;
+        font-weight: bold !important;
     }
-    
-    /* Para rangos de selección */
+
+    /* Sliders */
+    .stSlider div[data-baseweb="slider"] div,
     .stSlider [data-baseweb="slider"] {
-        background-color: rgba(255, 255, 255, 0.8) !important;
+        background-color: #d4d4d4 !important;
+    }
+
+    /* Inputs numéricos */
+    input[type="number"] {
+        color: #272E61 !important;
+        font-weight: bold !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -158,7 +160,8 @@ def app():
     """, unsafe_allow_html=True)
 
     # Tabs para las diferentes visualizaciones
-    tab1, tab2, tab3 = st.tabs(["Clasificación LaLiga", "Timeline Partidos", "Expected Goals (xG)"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Clasificación LaLiga","Timeline Partidos","Puntos Acumulados","Expected Goals (xG)"])
+
     
     # TAB 1 - Clasificación LaLiga
     with tab1:
@@ -181,7 +184,7 @@ def app():
             if "highlight_teams" not in st.session_state:
                 st.session_state.highlight_teams = ["Club Atlético de Madrid", "Real Madrid CF", "FC Barcelona"]
     
-            # Vrear el selector
+            # Crear el selector
             highlight_teams = st.multiselect("Equipos seleccionados: ",
                 df_cla["Equipo"].tolist(),
                 default=st.session_state.highlight_teams,
@@ -246,9 +249,52 @@ def app():
         except Exception as e:
             st.error(f"Error al cargar o procesar los datos: {str(e)}")
             import traceback
-            st.error(traceback.format_exc())    
+            st.error(traceback.format_exc())
 
     with tab3:
+        st.subheader("Progresión de Puntos Acumulados")
+
+        @st.cache_data(ttl=3600)
+        def load_matches_with_logos():
+            try:
+                api_key = st.secrets["FOOTBALL_DATA_API_KEY"]
+            except:
+                from dotenv import load_dotenv
+                load_dotenv()
+                api_key = os.getenv("FOOTBALL_DATA_API_KEY")
+                if not api_key:
+                    try:
+                        import toml
+                        config = toml.load("streamlit/secrets.toml")
+                        api_key = config.get("football_data_api_key", "")
+                    except:
+                        pass
+
+            if not api_key:
+                st.error("No se encontró la API Key para football-data.org. Verifica tus secrets o .env")
+                return None
+
+            return get_atletico_matches(api_key)
+
+        try:
+            puntos_df = load_matches_with_logos()
+            if puntos_df is not None and not puntos_df.empty:
+                
+                team_mapping = load_teams_mapping()
+                fig = plot_acumulado_puntos_con_escudos(puntos_df, team_mapping)
+                st.pyplot(fig)
+
+                with st.expander("Ver datos en tabla"):
+                    st.dataframe(puntos_df)
+
+            else:
+                st.warning("No se pudieron cargar los datos para puntos acumulados.")
+
+        except Exception as e:
+            st.error(f"Error al generar el gráfico: {str(e)}")
+    
+
+    with tab4:
         st.subheader("Análisis xG por Jornada")
         
         with st.spinner("Cargando datos de xG desde Understat..."):

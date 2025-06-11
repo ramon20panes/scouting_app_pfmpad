@@ -3,12 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+from matplotlib.ticker import MaxNLocator
 import matplotlib.ticker as ticker
 import matplotlib.image as mpimg
 import highlight_text
 from highlight_text import fig_text
 from PIL import Image
 from pathlib import Path
+import os
 
 # Definir función para crear un gráfico bumpy chart
 def create_bumpy_chart(df, highlight_teams=None):
@@ -110,7 +112,7 @@ def create_bumpy_chart(df, highlight_teams=None):
     ax.set_xlabel('Jornadas', color='#272E61', fontweight='bold', size=12)
     
     # Configurar etiquetas de eje X (jornadas)
-    plt.xticks(rotation=45, color="#272E61", weight='bold', fontsize=10)
+    plt.xticks(rotation=90, color="#272E61", weight='bold', fontsize=8)
     
     ax.set_ylim(21, 0)
 
@@ -119,13 +121,6 @@ def create_bumpy_chart(df, highlight_teams=None):
     ax.set_yticklabels([str(i) for i in range(1, 21)], color="#272E61", weight='bold', fontsize=10)
 
     ax.grid(True, alpha=0.3)
-
-    # Título
-    plt.title('Progresión LaLiga 24/25', 
-             color='darkblue', 
-             fontsize=18, 
-             fontweight='bold', 
-             pad=20)
     
     # Subtítulo con colores según equipo
     highlight_text_str = "Comparación "
@@ -318,7 +313,7 @@ def create_match_timeline(df_tm, team_mapping):
                ha='center', va='center',
                fontsize=10,
                weight='bold',
-               color='darkblue')
+               color='#272E61')
 
         result_color = colors[row['result']]
         ax.text(row['jornada'], height + 0.6,
@@ -336,7 +331,7 @@ def create_match_timeline(df_tm, team_mapping):
                va='center',
                fontsize=8,
                weight='bold',
-               color='darkblue',
+               color='#272E61',
                rotation=60)
 
     # Configuraciones adicionales del gráfico
@@ -347,19 +342,12 @@ def create_match_timeline(df_tm, team_mapping):
     # Configurar eje Y - quitar las marcas
     ax.set_yticks([0, 1, 3])
     ax.set_yticklabels(['0', '1', '3'])  # Etiquetas vacías para quitar los números
-    ax.tick_params(axis='y', colors='darkblue', size=0)
+    ax.tick_params(axis='y', colors='#272E61', size=0)
 
     # Ajustar eje X para mostrar solo jornadas disputadas
     ax.set_xticks(range(1, 39))
-    ax.set_xticklabels(range(1, 39), color='darkblue', size=8, weight='bold') 
-    ax.tick_params(axis='x', colors='darkblue', size=0)
-
-    # Título personalizado
-    plt.title('Atlético de Madrid 24/25', 
-             color='darkblue', 
-             fontsize=18, 
-             fontweight='bold', 
-             pad=65)  # Aumentar el pad para subir el título
+    ax.set_xticklabels(range(1, 39), color='#272E61', size=8, weight='bold') 
+    ax.tick_params(axis='x', colors='#272E61', size=0)
 
     # Calcular estadísticas
     total_matches = len(df_tm)
@@ -375,19 +363,21 @@ def create_match_timeline(df_tm, team_mapping):
         f"Victorias: {wins} | Empates: {draws} | Derrotas: {losses}"
     )
 
-    plt.text(0.9, 1.4, 
+    plt.text(0.45, 1.4, 
              stats_text, 
              horizontalalignment='center',
              verticalalignment='center',
              transform=ax.transAxes,
-             color='darkblue',
-             fontsize=12)
+             color='#272E61',
+             fontsize=12,
+             weight="bold")
 
     plt.tight_layout()
     
     return fig
 
 def plot_atletico_xg_differential(df_expcGL, df1):
+
     """
     Genera un gráfico de barras horizontales para visualizar la diferencia de xG por partido
     del Atlético de Madrid con las jornadas invertidas, considerando solo partidos jugados.
@@ -441,13 +431,13 @@ def plot_atletico_xg_differential(df_expcGL, df1):
                color='red', alpha=0.7, linewidth=bar_height*9)
     
     # Configuración de ejes
-    ax.tick_params(axis='x', colors='darkblue')
-    ax.tick_params(axis='y', colors='darkblue')
+    ax.tick_params(axis='x', colors='#272E61')
+    ax.tick_params(axis='y', colors='#272E61')
     plt.xticks([-3, -2, -1, 0, 1, 2, 3, 4, 5], fontsize=6, weight='bold')
     
     # Aplicar formato correcto a las jornadas (solo J1, J2, J3...)
     jornada_labels_inverted = [f"J{j}" for j in range(1, len(jornada_labels_inverted) + 1)]
-    plt.yticks(y_positions, jornada_labels_inverted, rotation='horizontal', fontsize=6, color='darkblue', weight='bold')
+    plt.yticks(y_positions, jornada_labels_inverted, rotation='horizontal', fontsize=6, color='#272E61', weight='bold')
     
     # Ajustes visuales
     ax.tick_params(axis='y', pad=1, which='both', left=True)
@@ -466,15 +456,109 @@ def plot_atletico_xg_differential(df_expcGL, df1):
                      c='red', size=5, ha='center', va='center', weight='bold')
     
     # Títulos
-    fig_text(0.25, 1.01, s="Atletico de Madrid 24-25", fontsize=12, weight='bold', color="darkblue")
     fig_text(0.25, 0.95, s=" <Negativo xG>     <Positivo xG>", 
              highlight_textprops=[{"color":'red'}, {'color':"green"}], 
              fontsize=8, fontweight="bold")
     
     # Etiqueta eje X
-    fig_text(0.33, 0.005, s="Diferencial xG", fontsize=5, fontweight="bold", color="darkblue")
+    fig_text(0.33, 0.005, s="Diferencial xG", fontsize=5, fontweight="bold", color="#272E61")
     
     # Ajustar márgenes
     plt.subplots_adjust(left=0.1, right=0.92, top=0.90, bottom=0.05)
    
+    return fig
+
+def plot_acumulado_puntos_con_escudos(df, team_mapping):
+    
+
+    fig, ax = plt.subplots(figsize=(14, 6), facecolor='#d4d4d4')
+    ax.set_facecolor('#d4d4d4')
+
+    # Añadir un borde azul del Atleti
+    fig.patch.set_edgecolor('#272E61')
+    fig.patch.set_linewidth(2)  # Grosor del borde
+
+    jornadas = df['jornada'].values
+    puntos_acumulados = df['cumulative_points'].values
+
+    # Diccionario manual para logos específicos
+    manual_logos = {
+        3: "assets/images/logos/esp.png",
+        10: "assets/images/logos/leg.png",
+        14: "assets/images/logos/ala.png",
+        20: "assets/images/logos/leg.png",
+        29: "assets/images/logos/esp.png",
+        34: "assets/images/logos/ala.png"
+    }
+
+    zoom_levels = {
+        3: 0.05, 10: 0.05, 14: 0.05,
+        20: 0.05, 29: 0.05, 34: 0.05
+    }
+
+    # Colores por tipo de resultado
+    resultado_color = {'W': '#4CAF50', 'D': '#FFA500', 'L': '#F44336'}
+    resultado_texto = {'W': '+3', 'D': '+1', 'L': '0'}
+
+    # Dibujar líneas coloreadas según resultado
+    for i in range(1, len(jornadas)):
+        resultado = df.loc[i, 'result']
+        color = resultado_color.get(resultado, 'gray')
+        ax.plot(jornadas[i-1:i+1], puntos_acumulados[i-1:i+1], color=color, linewidth=2.5)
+
+    # Añadir escudos y texto de resultado
+    for i, row in df.iterrows():
+        jornada = row['jornada']
+        puntos = row['cumulative_points']
+        team_name = row['opponent_display']
+        resultado = row['result']
+
+        try:
+            if jornada in manual_logos:
+                img_path = manual_logos[jornada]
+                zoom = zoom_levels.get(jornada, 0.05)
+                if Path(img_path).exists():
+                    img = mpimg.imread(img_path)
+                    logo_img = OffsetImage(img, zoom=zoom)
+                else:
+                    logo_img = None
+            else:
+                logo_img = get_team_logo(team_name, team_mapping)
+
+            if logo_img:
+                ab = AnnotationBbox(logo_img, (jornada, puntos), frameon=False, box_alignment=(0.5, 0.5))
+                ax.add_artist(ab)
+
+            # Etiqueta tipo "+3", "+1", "0"
+            label = resultado_texto.get(resultado, '')
+            ax.text(jornada, puntos + 3.5, label,
+                    ha='center', va='bottom',
+                    fontsize=10, weight='bold',
+                    color='#272E61')
+
+        except Exception as e:
+            print(f"⚠️ Error añadiendo escudo en jornada {jornada}: {e}")
+
+    # Estética del gráfico
+    ax.set_xlabel("Jornada", fontsize=14, fontweight='bold', color='#272E61')
+    ax.set_ylabel("Puntos acumulados", fontsize=14, fontweight='bold', color='#272E61')
+
+    ax.set_xticks(range(1, 39))
+    ax.set_xticklabels([str(label) for label in ax.get_xticks()],
+                    fontsize=10, weight='bold', color='#272E61')
+
+    yticks = ax.get_yticks()
+    ax.set_yticks(yticks)  # Fijamos los ticks para evitar el warning
+    ax.set_yticklabels([str(int(label)) for label in yticks],
+                    fontsize=10, weight='bold', color='#272E61')
+
+    ax.tick_params(axis='x', colors='#272E61')
+    
+    ax.grid(True, linestyle='--', alpha=0.5)
+
+    # Eliminar bordes
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+
+    plt.tight_layout()
     return fig
