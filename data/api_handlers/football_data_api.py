@@ -132,7 +132,7 @@ def fetch_matches(api_key):
         list: Lista de partidos o None si hay un error
     """
     headers = {'X-Auth-Token': api_key}
-    url = 'http://api.football-data.org/v4/teams/78/matches'
+    url = 'http://api.football-data.org/v4/teams/78/matches?competitions=PD&season=2024'
     
     # Usar caché para evitar llamadas constantes a la API
     @st.cache_data(ttl=3600) 
